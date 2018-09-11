@@ -1,7 +1,8 @@
 # FirstCode
 Android第一行代码，基础知识练习
 # Broadcast
-onReceive() 接受广播，并执行具体逻辑。
+onReceive() 接受广播，并执行具体逻辑。<br/>
+广播可以被其他程序接收.<br/>
 
 1.动态广播<BR/>
   (1) 代码中注册.<BR/>
