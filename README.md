@@ -12,3 +12,7 @@ onReceive() 接受广播，并执行具体逻辑。
   (1) AndroidManifest.xml 中注册<BR/>
   (2) 程序未启动可以收到广播<BR/>
   
+# 自定义广播<br/>
+1.标准广播<br/>
+(1) AndroidManifest.xml 中注册<BR/>
+(2) Intend 对象   Intent intent = new Intent("com.example.broadcasttest.MY_BROADCASE"); 发送广播,同时可以携带数据<br/>
