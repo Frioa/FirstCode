@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -24,18 +26,25 @@ public class BroadcastTest extends AppCompatActivity {
     }
 
     @Override
-    protected void onDestroy() {
+    protected void onDestroy() {// Back键生效
         super.onDestroy();
 //        动态广播取消注册
         unregisterReceiver(networkChangeReceiver);
     }
 
     class NetworkChangeReceiver extends BroadcastReceiver{
-
         @Override
         public void onReceive(Context context, Intent intent) {
 //            监听网络变化
-            Toast.makeText(context, "network changes",Toast.LENGTH_SHORT).show();
+//            获得系统服务类
+            ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(context.CONNECTIVITY_SERVICE);
+//            判断是否有网络链接 getActiveNetworkInfo()
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            if (networkInfo!=null && networkInfo.isAvailable()){
+                Toast.makeText(context, "network Available",Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(context, "network unAvailable",Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }
