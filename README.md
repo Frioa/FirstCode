@@ -17,3 +17,14 @@ onReceive() 接受广播，并执行具体逻辑。<br/>
 1.标准广播<br/>
 (1) AndroidManifest.xml 中注册<BR/>
 (2) Intend 对象   Intent intent = new Intent("com.example.broadcasttest.MY_BROADCASE"); 发送广播,同时可以携带数据<br/>
+
+2.有序广播<br/>
+(1)  使用sendOrderedBroadcast(intent,null);发送广播.<br/>
+(2） 有序广播AndroidManifest.xml设置优先级，使用abortBroadcast();广播截断
+
+# 本地广播<br/>
+1 能在本程序内接受广播，防止关键数据别截获
+2 接收其他应用发出的垃圾广播
+3 全局广播更为高效
+
+（1) 无法通过静态注册接收
