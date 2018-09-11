@@ -8,6 +8,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class BroadcastTest extends AppCompatActivity {
@@ -23,6 +25,18 @@ public class BroadcastTest extends AppCompatActivity {
         intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
         networkChangeReceiver = new NetworkChangeReceiver();
         registerReceiver(networkChangeReceiver, intentFilter);// 注册动态广播
+
+//        自定义广播
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent("com.example.broadcasttest.MY_BROADCASE");
+                sendBroadcast(intent);
+                // sendOrderedBroadcast(intent,null);
+
+            }
+        });
     }
 
     @Override
