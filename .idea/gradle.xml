@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Broadcast" />
+            <option value="$PROJECT_DIR$/newcanlender" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

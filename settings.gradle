@@ -1,1 +1,1 @@
-include ':Broadcast'
+include ':Broadcast', ':newcanlender', ':newcanlender'

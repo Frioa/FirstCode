@@ -24,6 +24,7 @@ public class BroadcastTest extends AppCompatActivity {
 //        接受系统发出Action "android.net.conn.CONNECTIVITY_CHANGE"
         intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
         networkChangeReceiver = new NetworkChangeReceiver();
+
         registerReceiver(networkChangeReceiver, intentFilter);// 注册动态广播
 
 //        自定义广播

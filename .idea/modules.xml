@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Broadcast/Broadcast.iml" filepath="$PROJECT_DIR$/Broadcast/Broadcast.iml" />
       <module fileurl="file://$PROJECT_DIR$/FirstCode.iml" filepath="$PROJECT_DIR$/FirstCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/newcanlender/newcanlender.iml" filepath="$PROJECT_DIR$/newcanlender/newcanlender.iml" />
     </modules>
   </component>
 </project>
