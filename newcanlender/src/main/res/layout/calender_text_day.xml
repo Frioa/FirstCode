@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.newcanlender.Calender_day_textview xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="26dp"
-    android:textSize="24dp"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:textSize="20dp"
     android:gravity="center"
     android:id="@+id/txt_calendar">
 
-</TextView>
+</com.example.newcanlender.Calender_day_textview>
+

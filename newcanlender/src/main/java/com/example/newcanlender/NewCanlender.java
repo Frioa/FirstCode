@@ -1,6 +1,7 @@
 package com.example.newcanlender;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
 import android.support.annotation.NonNull;
@@ -113,7 +114,28 @@ public class NewCanlender extends LinearLayout {
 
             int day = date.getDate();
             ((TextView)convertView).setText(String.valueOf(day));
+            Date now = new Date();
 
+//            Calendar calender = (Calendar) curDate.clone();
+//            calender.set(Calendar.DAY_OF_MONTH, 1);
+//            int daysInMonth = calender.getActualMaximum(Calendar.DATE);
+            boolean isTheSameMonth = false;
+            if (date.getMonth() == now.getMonth())
+            {
+                isTheSameMonth = true;
+            }
+            if (isTheSameMonth)
+            {
+                ((TextView)convertView).setTextColor(Color.parseColor("#000000"));
+            }else {
+                ((TextView)convertView).setTextColor(Color.parseColor("#666666"));
+            }
+
+            if( now.getDate() == date.getDate() && now.getMonth()==date.getMonth() && now.getYear() == date.getYear())
+            {
+                ((Calender_day_textview)convertView).setTextColor(Color.parseColor("#ff0000"));
+                ((Calender_day_textview)convertView).isToday = true;
+            }
             return convertView;
         }
     }
