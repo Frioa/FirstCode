@@ -17,13 +17,9 @@ public class MainActivity extends AppCompatActivity implements NewCanlender.NewC
         setContentView(R.layout.activity_main);
         NewCanlender canlender = (NewCanlender) findViewById(R.id.newCalender);
         canlender.lister = this;
-        String s = "abc";
-        change(s);
-        Log.d("Main", "onCreate: "+s);
+
     }
-    void change(String s){
-        s = "abc`1";
-    }
+
 
     @Override
     public void onItemLongPress(Date day) {
