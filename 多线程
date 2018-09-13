@@ -1,9 +1,31 @@
-
-
+# 多线程编程
+###方法一
 class MyThread extends Thread{
             @Override
             public void run() {
                 super.run();
             }
         }
-        
+new MyThread1().start();
+
+### 方法二
+class MyThread2 implements Runnable{
+
+        @Override
+        public void run() {
+
+        }
+    }
+    
+MyThread2 myThread2 = new MyThread2();
+new Thread(myThread2).start();
+
+### 方法三
+new Thread(new Runnable() {
+          @Override
+          public void run() {
+              
+          }
+      });
+
+
