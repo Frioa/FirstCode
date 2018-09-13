@@ -30,7 +30,7 @@ onReceive() 接受广播，并执行具体逻辑。<br/>
 （1) 无法通过静态注册接收
 
 # 自定义日历控件<BR/>
-1.自定义View，onDraw() 的绘制
-2.自定义Attribute 
-3.自定义View的响应事件
+1.自定义View，onDraw() 的绘制<BR/>
+2.自定义Attribute <BR/>
+3.自定义View的响应事件<BR/>
 
